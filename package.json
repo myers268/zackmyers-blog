@@ -3,6 +3,9 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "imports": {
+    "#app/*": ["./app/*"]
+  },
   "scripts": {
     "build": "remix build",
     "deploy": "fly deploy --remote-only",
