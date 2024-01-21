@@ -14,7 +14,7 @@ export default function App() {
     <html
       lang="en"
       data-force-color-scheme="light"
-      className="bg-background text-foreground accent-accent"
+      className="bg-background text-foreground accent-primary"
     >
       <head>
         <meta charSet="utf-8" />

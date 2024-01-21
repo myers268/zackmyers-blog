@@ -34,18 +34,78 @@
   }
 
   :root {
-    --background: var(--light, theme("colors.rose.50")) var(--dark, theme("colors.stone.900"));
-    --foreground: var(--light, theme("colors.rose.950")) var(--dark, theme("colors.rose.50"));
+    --green-50-oklch: 97.15% 0.01 160.08;
+    --green-100-oklch: 93.05% 0.02 152.81;
+    --green-200-oklch: 86.41% 0.04 155.33;
+    --green-300-oklch: 76.76% 0.06 156.95;
+    --green-400-oklch: 65.28% 0.07 157.12;
+    --green-500-oklch: 56.05% 0.08 157.53;
+    --green-600-oklch: 46.74% 0.07 158.04;
+    --green-700-oklch: 40.22% 0.06 158.16;
+    --green-800-oklch: 34.96% 0.05 160.15;
+    --green-900-oklch: 30.89% 0.04 161.39;
+    --green-950-oklch: 21.99% 0.02 165.61;
+    --green-1000-oklch: 16.50% 0.01 169.83;
+    
+    --lichen-50-oklch: 97.51% 0.00 145.56;
+    --lichen-100-oklch: 91.95% 0.00 134.85;
+    --lichen-200-oklch: 83.70% 0.01 131.38;
+    --lichen-300-oklch: 72.62% 0.02 136.10;
+    --lichen-400-oklch: 60.92% 0.02 140.01;
+    --lichen-500-oklch: 52.07% 0.02 135.03;
+    --lichen-600-oklch: 44.03% 0.02 138.73;
+    --lichen-700-oklch: 38.72% 0.01 136.63;
+    --lichen-800-oklch: 33.51% 0.01 139.44;
+    --lichen-900-oklch: 31.31% 0.01 145.41;
+    --lichen-950-oklch: 21.77% 0.01 145.32;
 
-    --primary: var(--light, theme("colors.green.200")) var(--dark, theme("colors.rose.400"));
-    --primary-foreground: var(--light, theme("colors.green.950")) var(--dark, theme("colors.rose.50"));
+    --brown-50-oklch: 97.66% 0.01 84.57;
+    --brown-100-oklch: 94.70% 0.02 86.43;
+    --brown-200-oklch: 89.79% 0.03 81.12;
+    --brown-300-oklch: 80.97% 0.05 79.23;
+    --brown-400-oklch: 71.90% 0.06 70.62;
+    --brown-500-oklch: 65.53% 0.07 66.61;
+    --brown-600-oklch: 60.28% 0.08 58.60;
+    --brown-700-oklch: 52.26% 0.07 52.18;
+    --brown-800-oklch: 45.63% 0.05 49.81;
+    --brown-900-oklch: 40.14% 0.04 51.47;
+    --brown-950-oklch: 26.39% 0.03 46.09;
 
-    --disabled: var(--light, 215 16% 47%) var(--dark, 215 16% 47%);
-    --disabled-foreground: var(--light, 229 84% 5%) var(--dark, 210 40% 98%);
+    --petrified-50-oklch: 97.36% 0.00 67.80;
+    --petrified-100-oklch: 94.71% 0.00 67.78;
+    --petrified-200-oklch: 87.05% 0.01 56.30;
+    --petrified-300-oklch: 78.72% 0.01 63.87;
+    --petrified-400-oklch: 69.19% 0.02 53.85;
+    --petrified-500-oklch: 62.30% 0.02 46.83;
+    --petrified-600-oklch: 57.74% 0.02 39.31;
+    --petrified-700-oklch: 50.90% 0.02 39.31;
+    --petrified-800-oklch: 44.69% 0.02 33.12;
+    --petrified-900-oklch: 39.24% 0.01 31.15;
+    --petrified-950-oklch: 26.14% 0.01 31.13;
+  }
 
-    --border: var(--light, 214 32% 91%) var(--dark, 217 33% 17%);
-    --focus: var(--light, 243 75% 59%) var(--dark, 230 94% 82%);
-    --accent: var(--light, 230 94% 82%) var(--dark, 243 75% 59%);
+  :root {
+    --background: var(--light, var(--brown-100-oklch)) var(--dark, var(--green-950-oklch));
+    --foreground: var(--light, var(--petrified-900-oklch)) var(--dark, var(--petrified-50-oklch));
+
+    --primary: var(--light, var(--green-500-oklch)) var(--dark, var(--green-500-oklch));
+    --primary-foreground: var(--light, var(--green-100-oklch)) var(--dark, var(--green-100-oklch));
+
+    --secondary: var(--light, var(--brown-300-oklch)) var(--dark, var(--brown-200-oklch));
+    --secondary-foreground: var(--light, var(--brown-800-oklch)) var(--dark, var(--brown-900-oklch));
+
+    --muted: var(--light, var(--lichen-200-oklch)) var(--dark, var(--lichen-900-oklch));
+    --muted-foreground: var(--light, var(--lichen-700-oklch)) var(--dark, var(--lichen-100-oklch));
+
+    --subtle: var(--light, var(--brown-200-oklch)) var(--dark, var(--brown-900-oklch));
+    --subtle-foreground: var(--light, var(--brown-700-oklch)) var(--dark, var(--brown-100-oklch));
+
+    --disabled: var(--light, var(--petrified-500-oklch)) var(--dark, var(--petrified-500-oklch));
+    --disabled-foreground: var(--light, var(--petrified-100-oklch)) var(--dark, var(--petrified-100-oklch));
+
+    --border: var(--light, var(--lichen-300-oklch)) var(--dark, var(--lichen-700-oklch));
+    --focus: var(--light, var(--petrified-400-oklch)) var(--dark, var(--brown-200-oklch));
+    --accent: var(--light, var(--green-500-oklch)) var(--dark, var(--green-500-oklch));
 
     color-scheme: var(--light, light) var(--dark, dark);
   }
@@ -78,6 +138,50 @@
   }
 
   * {
-    border-color: hsl(var(--border));
+    border-color: oklch(var(--border));
+    outline-color: oklch(var(--focus));
+    outline-offset: 0.2rem;
+  }
+
+  h1 {
+    font-size: var(--step-4);
+    max-inline-size: 20ch;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: var(--step-3);
+    max-inline-size: 25ch;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: var(--step-2);
+    max-inline-size: 35ch;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: var(--step-1);
+    max-inline-size: 35ch;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h5 {
+    font-size: var(--step-0);
+    max-inline-size: 35ch;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h6 {
+    font-size: var(--step--1);
+    max-inline-size: 35ch;
+    line-height: 1.2;
+    font-weight: 700;
   }
 }

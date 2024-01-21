@@ -4,10 +4,12 @@
   "sideEffects": false,
   "type": "module",
   "imports": {
-    "#app/*": ["./app/*"]
+    "#app/*": [
+      "./app/*"
+    ]
   },
   "scripts": {
-    "dev": "remix vite:dev",
+    "dev": "remix vite:dev --host",
     "build": "remix vite:build",
     "deploy": "fly deploy --remote-only",
     "start": "remix-serve ./build/index.js",
@@ -17,8 +19,10 @@
     "@remix-run/node": "latest",
     "@remix-run/react": "latest",
     "@remix-run/serve": "latest",
+    "cva": "beta",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
+    "react-aria-components": "^1.0.1",
     "react-dom": "^18.2.0",
     "vite-tsconfig-paths": "^4.2.2"
   },
@@ -30,6 +34,7 @@
     "autoprefixer": "^10.4.16",
     "eslint": "^8.56.0",
     "postcss-nesting": "^12.0.2",
+    "prettier": "next",
     "tailwindcss": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3",
