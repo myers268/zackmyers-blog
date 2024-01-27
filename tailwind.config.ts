@@ -51,7 +51,7 @@ export default {
         },
         border: "oklch(var(--border) / <alpha-value>)",
         focus: "oklch(var(--focus) / <alpha-value>)",
-        accent: "oklch(var(--accent) / <alpha-value>)",
+        emphasis: "oklch(var(--emphasis) / <alpha-value>)",
       },
     },
   },

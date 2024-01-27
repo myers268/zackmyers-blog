@@ -13,8 +13,7 @@ const button = cva({
         "bg-secondary text-secondary-foreground hover:bg-secondary/65 active:bg-secondary/30",
     },
     size: {
-      sm: "h-md",
-      md: "h-lg",
+      md: "h-md",
     }
   },
   defaultVariants: {
