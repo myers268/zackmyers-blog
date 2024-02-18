@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "latest",
+    "@mdx-js/rollup": "^3.0.1",
     "@remix-run/dev": "latest",
     "@remix-run/eslint-config": "latest",
     "@types/react": "^18.2.45",
@@ -36,6 +37,8 @@
     "eslint": "^8.56.0",
     "postcss-nesting": "^12.0.2",
     "prettier": "next",
+    "remark-frontmatter": "^5.0.0",
+    "remark-mdx-frontmatter": "^4.0.0",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3",

@@ -1,0 +1,17 @@
+---
+title: A Place to Call Home
+description: On creating my own space on the web
+published: 2024-02-18
+---
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title },
+    { name: "description", content: frontmatter.description },
+  ];
+};
+
+### {frontmatter.title}
+
+{frontmatter.description}
+{/* This is my attempt to spill words on a page and make them mean something. */}
