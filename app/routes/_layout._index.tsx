@@ -1,5 +1,6 @@
+import { getPosts } from "#app/server/posts";
 import type { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,22 +9,26 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export async function loader() {
+  return {
+    posts: await getPosts(),
+  }
+}
+
 export default function Index() {
+  const { posts } = useLoaderData<typeof loader>();
+
   return (
-    <>
-      <div className="p-md flex justify-center">
-        <div className="max-w-[70ch] text-center text-balance">
-          <h1>A space for me to gather my thoughts and share them with others</h1>
+    <div>
+      {posts.map(({ frontmatter, slug }) => (
+        <div key={slug} className="flex flex-col">
+          <Link to={slug} className="underline decoration-emphasis">
+            <h4>{frontmatter.title}</h4>
+          </Link>
+          <p>{frontmatter.description}</p>
+          <time className="text-[oklch(var(--lichen-400-oklch))] text-xs">{frontmatter.published}</time>
         </div>
-      </div>
-      <div className="mx-auto max-w-[75ch] text-justify flex flex-col gap-sm">
-        <p>
-          Hey there, I'm <Link className="text-primary" to="about">Zack Myers</Link>! This is a place for me to muse about the web and try out new ideas; to write about what works, what doesn't, and everything inbetween. It's primarily a place for me, but If you find it useful that's great too.
-        </p>
-        <p>
-          
-        </p>
-      </div>
-    </>
+      ))}
+    </div>
   );
 }
