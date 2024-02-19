@@ -16,20 +16,30 @@
   :root {
     --light: initial;
     --dark: /**/;
+    --green: /**/;
 
     @media (prefers-color-scheme: dark) {
       --light: /**/;
       --dark: initial;
+      --green: /**/;
     }
 
     &[data-force-color-scheme="light"] {
       --light: initial;
       --dark: /**/;
+      --green: /**/;
     }
 
     &[data-force-color-scheme="dark"] {
       --light: /**/;
       --dark: initial;
+      --green: /**/;
+    }
+
+    &[data-force-color-scheme="green"] {
+      --light: /**/;
+      --dark: /**/;
+      --green: initial;
     }
   }
 
@@ -85,27 +95,62 @@
   }
 
   :root {
-    --background: var(--light, var(--brown-100-oklch)) var(--dark, var(--green-950-oklch));
-    --foreground: var(--light, var(--petrified-900-oklch)) var(--dark, var(--petrified-50-oklch));
+    --background:
+      var(--light, var(--brown-100-oklch))
+      var(--dark, var(--green-950-oklch))
+      var(--green, var(--green-400-oklch));
+    --foreground:
+      var(--light, var(--lichen-900-oklch))
+      var(--dark, var(--lichen-50-oklch))
+      var(--green, var(--lichen-950-oklch));
 
-    --primary: var(--light, var(--green-500-oklch)) var(--dark, var(--green-500-oklch));
-    --primary-foreground: var(--light, var(--green-100-oklch)) var(--dark, var(--green-100-oklch));
+    --primary:
+      var(--light, var(--green-500-oklch))
+      var(--dark, var(--green-500-oklch))
+      var(--green, var(--green-200-oklch));
+    --primary-foreground:
+      var(--light, var(--green-100-oklch))
+      var(--dark, var(--green-100-oklch))
+      var(--green, var(--green-950-oklch));
 
-    --secondary: var(--light, var(--brown-300-oklch)) var(--dark, var(--brown-200-oklch));
-    --secondary-foreground: var(--light, var(--brown-800-oklch)) var(--dark, var(--brown-900-oklch));
+    --secondary:
+      var(--light, var(--brown-300-oklch))
+      var(--dark, var(--brown-200-oklch));
+    --secondary-foreground:
+      var(--light, var(--brown-800-oklch))
+      var(--dark, var(--brown-900-oklch));
 
-    --muted: var(--light, var(--lichen-200-oklch)) var(--dark, var(--lichen-900-oklch));
-    --muted-foreground: var(--light, var(--lichen-700-oklch)) var(--dark, var(--lichen-100-oklch));
+    --subtle-foreground:
+      var(--light, var(--lichen-500-oklch))
+      var(--dark, var(--lichen-200-oklch))
+      var(--green, var(--lichen-800-oklch));
 
-    --subtle: var(--light, var(--brown-200-oklch)) var(--dark, var(--brown-900-oklch));
-    --subtle-foreground: var(--light, var(--brown-700-oklch)) var(--dark, var(--brown-100-oklch));
+    --muted:
+      var(--light, var(--lichen-200-oklch))
+      var(--dark, var(--lichen-900-oklch));
+    --muted-foreground:
+      var(--light, var(--lichen-700-oklch))
+      var(--dark, var(--lichen-100-oklch));
 
-    --disabled: var(--light, var(--petrified-500-oklch)) var(--dark, var(--petrified-500-oklch));
-    --disabled-foreground: var(--light, var(--petrified-100-oklch)) var(--dark, var(--petrified-100-oklch));
+    --disabled:
+      var(--light, var(--petrified-500-oklch))
+      var(--dark, var(--petrified-500-oklch));
+    --disabled-foreground:
+      var(--light, var(--petrified-100-oklch))
+      var(--dark, var(--petrified-100-oklch));
 
-    --border: var(--light, var(--lichen-300-oklch)) var(--dark, var(--lichen-700-oklch));
-    --focus: var(--light, var(--petrified-400-oklch)) var(--dark, var(--brown-200-oklch));
-    --emphasis: var(--light, var(--green-500-oklch)) var(--dark, var(--brown-300-oklch));
+    --border:
+      var(--light, var(--lichen-300-oklch))
+      var(--dark, var(--lichen-700-oklch))
+      var(--green, var(--lichen-300-oklch));
+    --focus:
+      var(--light, var(--petrified-400-oklch))
+      var(--dark, var(--brown-200-oklch))
+      var(--green, var(--lichen-400-oklch));
+    --emphasis:
+      var(--light, var(--green-500-oklch))
+      var(--dark, var(--brown-300-oklch))
+      var(--green, var(--lichen-950-oklch));
 
     color-scheme: var(--light, light) var(--dark, dark);
   }

@@ -26,7 +26,7 @@ export default function Index() {
             <h4>{frontmatter.title}</h4>
           </Link>
           <p>{frontmatter.description}</p>
-          <time className="text-[oklch(var(--lichen-400-oklch))] text-xs">{frontmatter.published}</time>
+          <time className="text-subtle-foreground text-xs">{frontmatter.published}</time>
         </div>
       ))}
     </div>
