@@ -3,7 +3,7 @@ import { Link, Outlet } from "@remix-run/react";
 
 export default function Layout() {
   return (
-    <div className="flex justify-center h-screen">
+    <div className="flex justify-center">
       <div className="p-xs gap-sm flex flex-col w-[70ch]">
         <nav className="flex items-center gap-xs">
           <Link to="/">Home</Link>
