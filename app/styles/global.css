@@ -188,6 +188,11 @@
     outline-offset: 0.2rem;
   }
 
+  .flow > * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+
+
   h1, h2, h3, h4, h5, h6 {
     color: oklch(var(--emphasis));
   }

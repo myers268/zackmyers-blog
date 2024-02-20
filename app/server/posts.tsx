@@ -17,8 +17,8 @@ export const getPosts = async (): Promise<PostMeta[]> => {
   );
   const build = await import("virtual:remix/server-build");
   const posts = Object.entries(modules).map(([file, post]) => {
-    let id = file.replace("../", "").replace(/\.mdx$/, "");
-    let slug = build.routes[id].path;
+    const id = file.replace("../", "").replace(/\.mdx$/, "");
+    const slug = build.routes[id].path;
     if (slug === undefined) throw new Error(`No route for ${id}`);
 
     return {
@@ -31,7 +31,7 @@ export const getPosts = async (): Promise<PostMeta[]> => {
 
 function sortBy<T>(
   arr: T[],
-  key: (item: T) => any,
+  key: (item: T) => string,
   dir: "asc" | "desc" = "asc"
 ) {
   return arr.sort((a, b) => {
