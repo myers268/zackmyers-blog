@@ -1,6 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --text-*: initial;
+  --text-xs: var(--step--2);
+  --text-sm: var(--step--1);
+  --text-base: var(--step-0);
+  --text-md: var(--step-1);
+  --text-lg: var(--step-2);
+  --text-xl: var(--step-3);
+  --text-2xl: var(--step-4);
+  --text-3xl: var(--step-5);
+
+  --spacing-*: initial;
+  --spacing-3xs: var(--space-3xs);
+  --spacing-2xs: var(--space-2xs);
+  --spacing-xs: var(--space-xs);
+  --spacing-sm: var(--space-s);
+  --spacing-md: var(--space-m);
+  --spacing-lg: var(--space-l);
+  --spacing-xl: var(--space-xl);
+  --spacing-2xl: var(--space-2xl);
+  --spacing-3xl: var(--space-3xl);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-subtle: var(--subtle);
+  --color-subtle-foreground: var(--subtle-foreground);
+
+  --color-disabled: var(--disabled);
+  --color-disabled-foreground: var(--disabled-foreground);
+
+  --color-border: var(--border);
+  --color-focus: var(--focus);
+  --color-emphasis: var(--emphasis);
+}
 
 @layer base {
   *,
@@ -44,54 +89,54 @@
   }
 
   :root {
-    --green-50-oklch: 97.15% 0.01 160.08;
-    --green-100-oklch: 93.05% 0.02 152.81;
-    --green-200-oklch: 86.41% 0.04 155.33;
-    --green-300-oklch: 76.76% 0.06 156.95;
-    --green-400-oklch: 65.28% 0.07 157.12;
-    --green-500-oklch: 56.05% 0.08 157.53;
-    --green-600-oklch: 46.74% 0.07 158.04;
-    --green-700-oklch: 40.22% 0.06 158.16;
-    --green-800-oklch: 34.96% 0.05 160.15;
-    --green-900-oklch: 30.89% 0.04 161.39;
-    --green-950-oklch: 21.99% 0.02 165.61;
-    --green-1000-oklch: 16.50% 0.01 169.83;
+    --green-50-oklch: oklch(97.15% 0.01 160.08);
+    --green-100-oklch: oklch(93.05% 0.02 152.81);
+    --green-200-oklch: oklch(86.41% 0.04 155.33);
+    --green-300-oklch: oklch(76.76% 0.06 156.95);
+    --green-400-oklch: oklch(65.28% 0.07 157.12);
+    --green-500-oklch: oklch(56.05% 0.08 157.53);
+    --green-600-oklch: oklch(46.74% 0.07 158.04);
+    --green-700-oklch: oklch(40.22% 0.06 158.16);
+    --green-800-oklch: oklch(34.96% 0.05 160.15);
+    --green-900-oklch: oklch(30.89% 0.04 161.39);
+    --green-950-oklch: oklch(21.99% 0.02 165.61);
+    --green-1000-oklch: oklch(16.50% 0.01 169.83);
     
-    --lichen-50-oklch: 97.51% 0.00 145.56;
-    --lichen-100-oklch: 91.95% 0.00 134.85;
-    --lichen-200-oklch: 83.70% 0.01 131.38;
-    --lichen-300-oklch: 72.62% 0.02 136.10;
-    --lichen-400-oklch: 60.92% 0.02 140.01;
-    --lichen-500-oklch: 52.07% 0.02 135.03;
-    --lichen-600-oklch: 44.03% 0.02 138.73;
-    --lichen-700-oklch: 38.72% 0.01 136.63;
-    --lichen-800-oklch: 33.51% 0.01 139.44;
-    --lichen-900-oklch: 31.31% 0.01 145.41;
-    --lichen-950-oklch: 21.77% 0.01 145.32;
+    --lichen-50-oklch: oklch(97.51% 0.00 145.56);
+    --lichen-100-oklch: oklch(91.95% 0.00 134.85);
+    --lichen-200-oklch: oklch(83.70% 0.01 131.38);
+    --lichen-300-oklch: oklch(72.62% 0.02 136.10);
+    --lichen-400-oklch: oklch(60.92% 0.02 140.01);
+    --lichen-500-oklch: oklch(52.07% 0.02 135.03);
+    --lichen-600-oklch: oklch(44.03% 0.02 138.73);
+    --lichen-700-oklch: oklch(38.72% 0.01 136.63);
+    --lichen-800-oklch: oklch(33.51% 0.01 139.44);
+    --lichen-900-oklch: oklch(31.31% 0.01 145.41);
+    --lichen-950-oklch: oklch(21.77% 0.01 145.32);
 
-    --brown-50-oklch: 97.66% 0.01 84.57;
-    --brown-100-oklch: 94.70% 0.02 86.43;
-    --brown-200-oklch: 89.79% 0.03 81.12;
-    --brown-300-oklch: 80.97% 0.05 79.23;
-    --brown-400-oklch: 71.90% 0.06 70.62;
-    --brown-500-oklch: 65.53% 0.07 66.61;
-    --brown-600-oklch: 60.28% 0.08 58.60;
-    --brown-700-oklch: 52.26% 0.07 52.18;
-    --brown-800-oklch: 45.63% 0.05 49.81;
-    --brown-900-oklch: 40.14% 0.04 51.47;
-    --brown-950-oklch: 26.39% 0.03 46.09;
+    --brown-50-oklch: oklch(97.66% 0.01 84.57);
+    --brown-100-oklch: oklch(94.70% 0.02 86.43);
+    --brown-200-oklch: oklch(89.79% 0.03 81.12);
+    --brown-300-oklch: oklch(80.97% 0.05 79.23);
+    --brown-400-oklch: oklch(71.90% 0.06 70.62);
+    --brown-500-oklch: oklch(65.53% 0.07 66.61);
+    --brown-600-oklch: oklch(60.28% 0.08 58.60);
+    --brown-700-oklch: oklch(52.26% 0.07 52.18);
+    --brown-800-oklch: oklch(45.63% 0.05 49.81);
+    --brown-900-oklch: oklch(40.14% 0.04 51.47);
+    --brown-950-oklch: oklch(26.39% 0.03 46.09);
 
-    --petrified-50-oklch: 97.36% 0.00 67.80;
-    --petrified-100-oklch: 94.71% 0.00 67.78;
-    --petrified-200-oklch: 87.05% 0.01 56.30;
-    --petrified-300-oklch: 78.72% 0.01 63.87;
-    --petrified-400-oklch: 69.19% 0.02 53.85;
-    --petrified-500-oklch: 62.30% 0.02 46.83;
-    --petrified-600-oklch: 57.74% 0.02 39.31;
-    --petrified-700-oklch: 50.90% 0.02 39.31;
-    --petrified-800-oklch: 44.69% 0.02 33.12;
-    --petrified-900-oklch: 39.24% 0.01 31.15;
-    --petrified-950-oklch: 26.14% 0.01 31.13;
+    --petrified-50-oklch: oklch(97.36% 0.00 67.80);
+    --petrified-100-oklch: oklch(94.71% 0.00 67.78);
+    --petrified-200-oklch: oklch(87.05% 0.01 56.30);
+    --petrified-300-oklch: oklch(78.72% 0.01 63.87);
+    --petrified-400-oklch: oklch(69.19% 0.02 53.85);
+    --petrified-500-oklch: oklch(62.30% 0.02 46.83);
+    --petrified-600-oklch: oklch(57.74% 0.02 39.31);
+    --petrified-700-oklch: oklch(50.90% 0.02 39.31);
+    --petrified-800-oklch: oklch(44.69% 0.02 33.12);
+    --petrified-900-oklch: oklch(39.24% 0.01 31.15);
+    --petrified-950-oklch: oklch(26.14% 0.01 31.13);
   }
 
   :root {
@@ -183,8 +228,8 @@
   }
 
   * {
-    border-color: oklch(var(--border));
-    outline-color: oklch(var(--focus));
+    border-color: var(--border);
+    outline-color: var(--focus);
     outline-offset: 0.2rem;
   }
 
@@ -193,7 +238,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: oklch(var(--emphasis));
+    color: var(--emphasis);
   }
 
   h1 {
