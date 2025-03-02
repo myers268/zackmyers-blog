@@ -15,11 +15,11 @@ export const getPosts = async (): Promise<PostMeta[]> => {
     "../routes/_layout._post.*.mdx",
     { eager: true }
   );
-  const build = await import("virtual:remix/server-build");
+  const build = await import("virtual:react-router/server-build");
   const posts = Object.entries(modules).map(([file, post]) => {
     const id = file.replace("../", "").replace(/\.mdx$/, "");
-    const slug = build.routes[id].path;
-    if (slug === undefined) throw new Error(`No route for ${id}`);
+    const slug = build.routes[id]?.path;
+    if (typeof slug === "undefined") throw new Error(`No route for ${id}`);
 
     return {
       slug,

@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/triple-slash-reference
-/// <reference types="@remix-run/node" />
+/// <reference types="react-router" />
 /// <reference types="vite/client" />
 
 declare module "*.mdx" {
@@ -8,7 +8,7 @@ declare module "*.mdx" {
   export default MDXComponent;
 }
 
-declare module "virtual:remix/server-build" {
-  import type { ServerBuild } from "@remix-run/node";
+declare module "virtual:react-router/server-build" {
+  import type { ServerBuild } from "react-router";
   export const routes: ServerBuild["routes"];
 }
