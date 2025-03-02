@@ -1,11 +1,13 @@
 import { getPosts } from "#app/server/posts";
-import type { MetaFunction } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
+import type { MetaFunction } from "react-router";
+import { Link } from "react-router";
+
+import type { Route } from "./+types/_layout._index";
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Zack Myers' Blog" },
-    { name: "description", content: "Welcome to Remix!" },
+    { name: "description", content: "Musings on software engineering and sometimes other topics." },
   ];
 };
 
@@ -15,8 +17,8 @@ export async function loader() {
   }
 }
 
-export default function Index() {
-  const { posts } = useLoaderData<typeof loader>();
+export default function Index({ loaderData }: Route.ComponentProps) {
+  const { posts } = loaderData;
 
   return (
     <div>

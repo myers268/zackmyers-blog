@@ -9,40 +9,39 @@
     ]
   },
   "scripts": {
-    "dev": "remix vite:dev --host",
-    "build": "remix vite:build",
+    "dev": "react-router dev --host",
+    "build": "react-router build",
     "deploy": "fly deploy --remote-only",
-    "start": "remix-serve ./build/server/index.js",
-    "typecheck": "tsc"
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@biomejs/biome": "^1.5.3",
-    "@remix-run/node": "latest",
-    "@remix-run/react": "latest",
-    "@remix-run/serve": "latest",
+    "@react-router/node": "^7.2.0",
+    "@react-router/serve": "^7.2.0",
     "@tailwindcss/vite": "^4.0.9",
     "cva": "beta",
     "isbot": "^4.4.0",
     "react": "^18.2.0",
     "react-aria-components": "^1.0.1",
     "react-dom": "^18.2.0",
+    "react-router": "^7.2.0",
     "vite-tsconfig-paths": "^4.2.2"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "latest",
     "@mdx-js/rollup": "^3.0.1",
-    "@remix-run/dev": "latest",
-    "@remix-run/eslint-config": "latest",
+    "@react-router/dev": "^7.2.0",
+    "@react-router/fs-routes": "^7.2.0",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
-    "eslint": "^8.56.0",
-    "postcss-nesting": "^12.0.2",
+    "eslint": "^9.21.0",
     "prettier": "next",
     "remark-frontmatter": "^5.0.0",
     "remark-mdx-frontmatter": "^4.0.0",
     "tailwindcss": "^4.0.9",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.3.3",
+    "typescript": "^5.8.2",
     "vite": "^5.0.10"
   },
   "engines": {
